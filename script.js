@@ -1,4 +1,5 @@
-var tl = gsap.timeline()
+function loaderAnimation(){
+    var tl = gsap.timeline()
 
 tl.from(".line h1", {
     y: 150,
@@ -42,3 +43,23 @@ tl.from("#page1",{
 tl.to("#loader",{
     display:"none"
 })
+tl.from("#center1 h1,#center2 h1,#center3 h2,#center4 h1",{
+    y:120,
+    stagger:0.15
+})
+tl.from("#nav",{
+    opacity:0
+})
+}
+function cursor(){
+    document.addEventListener("mousemove",function(dets){
+        gsap.to("#cursor",{
+            left:dets.x,
+            top:dets.y
+        })
+    })
+    Shery.makeMagnet("#nav-part2 h4");
+}
+loaderAnimation()
+cursor()
+
