@@ -150,7 +150,7 @@ body {
     width: 72%;
     margin-left: 27%;
     height: fit-content;
-    overflow: hidden;
+    overflow-y: hidden;
     display: flex;
     align-items: center;
 
@@ -165,6 +165,16 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     line-height: 7.2vw;
+    position: relative;
+}
+#center1::before{
+    content: "01";
+    position: absolute;
+    font-family: "silk serif";
+    font-weight: 500;
+    font-size: 3.2vw;
+    top: 30.5%;
+    left: 17%;
 }
 
 .center h2 {
@@ -193,8 +203,8 @@ body {
 }
 
 #video-container {
-    width: 72.2vw;
-    height: 75vh;
+    width: 72vw;
+    height: 76vh;
     position: relative;
     left: 27%;
 }
@@ -254,8 +264,17 @@ body {
 #page4-content h1 {
     font-size: 7vw;
     text-transform: uppercase;
+    position: relative;
 }
-
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-family: "silk serif";
+    font-weight: 500;
+    font-size: 3.2vw;
+    top: 10%;
+    left: -15%;
+}
 #page4-content .underline {
     height: 1.5px;
     width: 93%;
@@ -314,8 +333,131 @@ body {
     width: 40%;
     font-size: 1vw;
 }
-
+#page4-content h5{
+    font-size: 0.95vw;
+    font-weight: 100;
+    margin-top: -1vw;
+    margin-bottom: 2vw;
+}
 #page5 {
     min-height: 100vh;
     width: 100%;
+    position: relative;
+    background: #151515;
+}
+.elem{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2vw;
+}
+.elem h1{
+    /* background-color: red; */
+    font-size: 6.5vw;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 20px;
+    animation-name: marquee;
+    animation-duration: 17s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes marquee {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 24px));
+    }
+}
+.elem2{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2vw;
+}
+.elem2 h1{
+    /* background-color: red; */
+    font-size: 6.5vw;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: translateX(calc(-100% - 24px));
+    margin-right: 20px;
+    animation-name: marquee;
+    animation-duration: 17s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+.elem span{
+    font-style: italic;
+    color: transparent;
+    font-family: "silk serif";
+}
+.elem2 span{
+    font-style: italic;
+    color: transparent;
+    font-family: "silk serif";
+}
+#footer{
+    width: 100%;
+    height: 100vh;
+    background:#151515;
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 4vw;
+}
+#footer h1{
+    font-size: 7.5vw;
+    /* background: blue; */
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 600;
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-family: "silk serif";
+    font-weight: 500;
+    font-size: 3.2vw;
+    top: 10%;
+    left: -15%;
+}
+.underline{
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    margin-top: 5vw;
+}
+#footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12.5vw;
+    padding-right: 22vw;
+}
+#footer-div h5{
+    font-size: 1.2vw;
+    margin-top: 6vw;
+    margin-bottom: 1.7vw;
+    font-weight: 500;
+}
+#footer-div h4{
+    font-size: 1.7vw;
+    font-weight: 500;
+    line-height: 1.9vw;
+}
+#footer-div .box{
+    margin-bottom: 2vw;
+}
+#footer>h5{
+    font-size: 1vw;
+    font-weight: 500;
+    padding: 2vw 0;
 }
