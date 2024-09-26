@@ -280,9 +280,14 @@ body {
 
 #image-div-container {
     margin-top: 10vw;
-    background: red;
+    /* background: red; */
     position: relative;
     padding: 2vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
 }
 
 .img-div {
@@ -290,7 +295,9 @@ body {
     width: 24vw;
     position: relative;
     overflow: hidden;
-    background-color: blue;
+    /* background-color: blue; */
+    flex-shrink: 0;
+    
 }
 
 .img-div img {
