@@ -149,23 +149,51 @@ function loco() {
     ScrollTrigger.refresh();
 
 }
-document.addEventListener("mousemove",function(dets){
-    gsap.to("#flag",{
-        x:dets.x,
-        y:dets.y
+function flag(){
+    document.addEventListener("mousemove",function(dets){
+        gsap.to("#flag",{
+            x:dets.x,
+            y:dets.y
+        })
+    })
+    document.querySelector("#center3").addEventListener("mouseenter",function(){
+        gsap.to("#flag",{
+            opacity:1
+        })
+    })
+    document.querySelector("#center3").addEventListener("mouseleave",function(){
+        gsap.to("#flag",{
+            opacity:0
+        })
+    })
+}
+
+function footerAnimation(){
+    var footer = document.querySelector("#footer1")
+footer.addEventListener("mouseenter",function(){
+    footer.style.webkitTextStroke = "1px #fff";
+    gsap.to("#footer1> h1",{
+        fontFamily:"silk serif",
+        fontWeight:500,
+        color: "transparent", // Transparent text color
+        duration: 0.5, // Smooth transition duration
+        ease: "power3.out",
     })
 })
-document.querySelector("#center3").addEventListener("mouseenter",function(){
-    gsap.to("#flag",{
-        opacity:1
+footer.addEventListener("mouseleave",function(){
+    gsap.to("#footer1> h1",{
+        fontFamily:"plain Light",
+        color:"white",
+        duration:0.5,
+        fontWeight:700,
+        ease: "power3.out",
     })
+    footer.style.webkitTextStroke = "0px transparent";
 })
-document.querySelector("#center3").addEventListener("mouseleave",function(){
-    gsap.to("#flag",{
-        opacity:0
-    })
-})
+}
 loaderAnimation()
 loco()
 cursor()
 SheryAinmation()
+flag()
+footerAnimation()

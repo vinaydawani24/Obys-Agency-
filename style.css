@@ -596,7 +596,15 @@ body {
     padding-right: 4vw;
     margin-top: 15vh;
 }
-
+#footer1{
+    display: flex;
+    align-items: center;
+    gap: 2.2vw;
+}
+#footer1 img{
+    width: 8vw;
+    
+}
 #footer h1 {
     font-size: 7.5vw;
     /* background: blue; */
@@ -619,7 +627,7 @@ body {
     height: 2px;
     width: 100%;
     background: #fff;
-    margin-top: 5vw;
+    margin-top: 4vw;
 }
 
 #footer-div {
@@ -629,7 +637,6 @@ body {
     gap: 12.5vw;
     padding-right: 22vw;
 }
-
 #footer-div h5 {
     font-size: 1.2vw;
     margin-top: 6vw;
